@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Integration - Math Simulations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📐 Math Simulations</h1>
+            <p class="subtitle">Interactive Learning for Algebra & Geometry</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fractions.html">Fractions</a></li>
+                <li><a href="lines.html">Lines</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="integration.html" class="active">Integration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="simulation-container">
+            <h2 class="simulation-title">📊 Numerical Integration</h2>
+            
+            <div class="info-box">
+                <h4>About Numerical Integration</h4>
+                <p>Numerical integration approximates the area under a curve by dividing it into smaller shapes. Different methods use different approaches: Left/Right Riemann Sums use rectangles at endpoints, Midpoint Rule uses rectangles at midpoints, and Trapezoidal Rule uses trapezoids.</p>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="functionInput">Function f(x):</label>
+                    <input type="text" id="functionInput" value="x^2" placeholder="e.g., x^2, sin(x), x^3+2*x">
+                </div>
+                <div class="control-group">
+                    <label for="lowerBound">Lower Bound (a):</label>
+                    <input type="number" id="lowerBound" min="-10" max="10" step="0.5" value="0">
+                </div>
+                <div class="control-group">
+                    <label for="upperBound">Upper Bound (b):</label>
+                    <input type="number" id="upperBound" min="-10" max="10" step="0.5" value="4">
+                </div>
+                <div class="control-group">
+                    <label for="numIntervals">Number of Intervals (n):</label>
+                    <input type="range" id="numIntervals" min="1" max="50" step="1" value="10">
+                    <input type="number" id="numIntervalsValue" min="1" max="50" step="1" value="10" style="width: 100%;">
+                </div>
+                <div class="control-group">
+                    <label for="method">Integration Method:</label>
+                    <select id="method">
+                        <option value="left">Left Riemann Sum</option>
+                        <option value="right">Right Riemann Sum</option>
+                        <option value="midpoint">Midpoint Rule</option>
+                        <option value="trapezoidal">Trapezoidal Rule</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="formula-display" id="formulaDisplay">
+                ∫₀⁴ x² dx ≈ 21.33 (Left Riemann Sum)
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="integrationCanvas" width="900" height="600"></canvas>
+            </div>
+
+            <div class="info-box" id="infoBox">
+                <h4>Integration Information</h4>
+                <p id="integrationInfo">Left Riemann Sum: Uses left endpoints of subintervals</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Math Simulations. Educational tool for students.</p>
+        </div>
+    </footer>
+
+    <script src="integration.js"></script>
+</body>
+</html>
+

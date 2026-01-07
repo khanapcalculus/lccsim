@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lines Simulation - Math Simulations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📐 Math Simulations</h1>
+            <p class="subtitle">Interactive Learning for Algebra & Geometry</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fractions.html">Fractions</a></li>
+                <li><a href="lines.html" class="active">Lines</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="integration.html">Integration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="simulation-container">
+            <h2 class="simulation-title">📈 Linear Equations & Graphing</h2>
+            
+            <div class="info-box">
+                <h4>About Linear Equations</h4>
+                <p>A linear equation is an equation of the form y = mx + b, where m is the slope (steepness) and b is the y-intercept (where the line crosses the y-axis). The slope tells us how much y changes for each unit change in x.</p>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="slope">Slope (m):</label>
+                    <input type="range" id="slope" min="-5" max="5" step="0.1" value="1">
+                    <input type="number" id="slopeValue" min="-5" max="5" step="0.1" value="1" style="width: 100%;">
+                </div>
+                <div class="control-group">
+                    <label for="intercept">Y-Intercept (b):</label>
+                    <input type="range" id="intercept" min="-5" max="5" step="0.1" value="0">
+                    <input type="number" id="interceptValue" min="-5" max="5" step="0.1" value="0" style="width: 100%;">
+                </div>
+                <div class="control-group">
+                    <label for="showGrid">Show Grid:</label>
+                    <select id="showGrid">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="showPoints">Show Points:</label>
+                    <select id="showPoints">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="formula-display" id="formulaDisplay">
+                y = 1x + 0
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="lineCanvas" width="800" height="600"></canvas>
+            </div>
+
+            <div class="info-box" id="infoBox">
+                <h4>Line Information</h4>
+                <p id="lineInfo">Slope: 1 | Y-Intercept: 0 | The line passes through (0, 0)</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Math Simulations. Educational tool for students.</p>
+        </div>
+    </footer>
+
+    <script src="lines.js"></script>
+</body>
+</html>
+

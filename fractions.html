@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractions Simulation - Math Simulations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📐 Math Simulations</h1>
+            <p class="subtitle">Interactive Learning for Algebra & Geometry</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fractions.html" class="active">Fractions</a></li>
+                <li><a href="lines.html">Lines</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="integration.html">Integration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="simulation-container">
+            <h2 class="simulation-title">🔢 Fractions Visualization</h2>
+            
+            <div class="info-box">
+                <h4>About Fractions</h4>
+                <p>A fraction represents parts of a whole. The number on top (numerator) shows how many parts you have, and the number on the bottom (denominator) shows how many equal parts the whole is divided into.</p>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="numerator1">Numerator 1:</label>
+                    <input type="number" id="numerator1" min="0" max="10" value="3">
+                </div>
+                <div class="control-group">
+                    <label for="denominator1">Denominator 1:</label>
+                    <input type="number" id="denominator1" min="1" max="10" value="4">
+                </div>
+                <div class="control-group">
+                    <label for="numerator2">Numerator 2:</label>
+                    <input type="number" id="numerator2" min="0" max="10" value="2">
+                </div>
+                <div class="control-group">
+                    <label for="denominator2">Denominator 2:</label>
+                    <input type="number" id="denominator2" min="1" max="10" value="5">
+                </div>
+                <div class="control-group">
+                    <label for="operation">Operation:</label>
+                    <select id="operation">
+                        <option value="compare">Compare</option>
+                        <option value="add">Add</option>
+                        <option value="subtract">Subtract</option>
+                        <option value="multiply">Multiply</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="formula-display" id="formulaDisplay">
+                Fraction 1: 3/4 | Fraction 2: 2/5
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="fractionCanvas" width="800" height="400"></canvas>
+            </div>
+
+            <div class="info-box" id="resultBox">
+                <h4>Result</h4>
+                <p id="resultText">Adjust the fractions above to see comparisons and calculations!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Math Simulations. Educational tool for students.</p>
+        </div>
+    </footer>
+
+    <script src="fractions.js"></script>
+</body>
+</html>
+
